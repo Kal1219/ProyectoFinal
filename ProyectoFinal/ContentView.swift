@@ -13,8 +13,21 @@ struct ContentView: View {
         {
             ZStack
             {
-                Color(.black)
+                Color(.systemGreen)
                     .ignoresSafeArea()
+                VStack
+                {
+                    Image("logoImss")
+                        .resizable()
+                        .frame(width: 50, height: 50)
+                        .aspectRatio(contentMode: .fit)
+                        .cornerRadius(15)
+                        .padding(.leading, 300)
+                    Text("Bienvenidos a la aplicación del IMSS donde podrán aplicar sus citas con su médico y en su zona")
+                        .bold()
+                        .font(.body)
+                        .foregroundColor(.white)
+                }
             }
         }
     }
