@@ -19,14 +19,24 @@ struct ContentView: View {
                 {
                     Image("logoImss")
                         .resizable()
-                        .frame(width: 50, height: 50)
+                        .frame(width: 200, height: 200)
                         .aspectRatio(contentMode: .fit)
                         .cornerRadius(15)
-                        .padding(.leading, 300)
-                    Text("Bienvenidos a la aplicación del IMSS donde podrán aplicar sus citas con su médico y en su zona")
+                        .padding()
+                    Text("Bienvenidos a la aplicación del IMSS")
                         .bold()
-                        .font(.body)
+                        .font(.title)
                         .foregroundColor(.white)
+                    NavigationLink(destination: MenuView()) {
+                        Text("Entrar")
+                            .font(.largeTitle)
+                            .frame(width: 150, height: 50)
+                            .foregroundColor(Color.white)
+                            .background(Color(.red))
+                            .cornerRadius(15)
+                            .padding()
+                            
+                    }
                 }
             }
         }
